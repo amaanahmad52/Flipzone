@@ -111,17 +111,17 @@ const Login = () => {
     formData.set("password", Password);
     formData.set("avatar", avatar);
     console.log("formdata",formData);
-    // dispatch(registerUser(Name,Email,Password,avatar));
+   dispatch(registerUser(Name,Email,Password,avatar));
    
-    try {
-      const { data } = await axios.post("api/v1/user/register", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-      // console.log(data.user);
-    } catch (error) {
-      console.error("Error during registration:", error);
-      // Handle the error, show an alert, etc.
-    }
+    // try {
+    //   const { data } = await axios.post("api/v1/user/register", formData, {
+    //     headers: { "Content-Type": "multipart/form-data" },
+    //   });
+    //   // console.log(data.user);
+    // } catch (error) {
+    //   console.error("Error during registration:", error);
+    //   // Handle the error, show an alert, etc.
+    // }
   
   };
 
